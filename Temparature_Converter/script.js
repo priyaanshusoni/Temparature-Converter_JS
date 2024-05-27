@@ -6,10 +6,14 @@ let temp;
 
 function convert(){
          if(tofahrenhite.checked){
-            result.textContent= 'a'
+            temp=Number(textbox.value);
+            temp = temp * 9/ 5 + 32;
+             result.textContent=temp.toFixed(1) + " Degree Farenhite";
          }
          else if(tocelcius.checked){
-            result.textContent= 'b'
+            temp=Number(textbox.value);
+            temp = (temp - 32) * (5/9);
+             result.textContent=temp.toFixed(1) + " Degree Celcius";
          }
          else{
             result.textContent= 'Select a unit'
